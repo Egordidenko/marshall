@@ -1,0 +1,45 @@
+<div class="contact">
+  <div class="contact__image">
+    {#    <picture>#}
+    {#      <source type="image/webp" srcset="/img/contact-page-bg.webp">#}
+    {#      <source type="image/jpeg" srcset="/img/contact-page-bg.jpg">#}
+    <img src="/img/17_07_2019_J.Marshall_Shot_05_044.jpg" alt="contact page image">
+    {#    </picture>#}
+  </div>
+  <div class="container container--default">
+    <div class="contact__content">
+      <form data-action="/form-process.php" class="default-form" id="contact-form">
+        <div class="default-form__content">
+          <div class="contact__title text-container text-container--lg">
+            <p >Call us on +44 1752 366311 or send us a message below.</p>
+          </div>
+          <input type="text" name="require_attention" style="position: absolute!important;left: -10000px;" tabindex="-1">
+          <label class="default-input">
+            <input class="default-input__input" type="text" name="name" placeholder="Name">
+            <span class="default-input__error"></span>
+          </label>
+          <label class="default-input">
+            <input class="default-input__input" type="email" name="email" placeholder="Email" required>
+            <span class="default-input__error"></span>
+          </label>
+          <label class="default-input">
+            <textarea class="default-input__textarea" name="message" placeholder="Message"></textarea>
+            <span class="default-input__error"></span>
+          </label>
+          <label class="default-checkbox">
+            <input class="default-checkbox__input" type="checkbox" name="accept" required>
+            <span class="default-checkbox__check"></span>
+            <span class="default-checkbox__text">By ticking this box you are agreeing to us handling and storing your data</span>
+          </label>
+          <div class="default-form__error"> There was an error when sending the form. Please try again later.</div>
+          <div class="default-form__button">
+            <button type="submit" class="button button--dark">Send Message</button>
+          </div>
+        </div>
+        <div class="default-form__success">
+          <span>Thank you for the message. We'll get back to you shortly.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.section-image {
+  padding: rem-calc(100 0);
+  background: $color-2;
+
+  @media (max-width: $sm) {
+    padding: rem-calc(80 0);
+  }
+
+  &--no-padding-top {
+    padding-top: 0;
+  }
+
+  &--no-padding-bottom {
+    padding-bottom: 0;
+  }
+
+  &__image {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+}

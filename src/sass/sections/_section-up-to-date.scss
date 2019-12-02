@@ -1,0 +1,25 @@
+.up-to-date {
+  padding: rem-calc(110 0 0);
+
+  @media (max-width: $sm) {
+    padding: rem-calc(80 0 0);
+  }
+
+  &__inner {
+    max-width: 410px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .title {
+    margin-bottom: rem-calc(50);
+  }
+
+  .text-container {
+    line-height: 1.3em;
+  }
+
+  &__text {
+    margin-bottom: rem-calc(28);
+  }
+}

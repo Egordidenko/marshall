@@ -1,0 +1,13 @@
+.intro-text {
+  padding: rem-calc(185 0 70);
+
+  &__inner {
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .title {
+    margin-bottom: rem-calc(45);
+  }
+}

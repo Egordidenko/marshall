@@ -1,0 +1,62 @@
+.default-form {
+  position: relative;
+
+  &__error {
+    font-size: 12px;
+    color: $color-5;
+    margin-top: 30px;
+    display: none;
+  }
+
+  &__button {
+    margin-top: rem-calc(65);
+    transition: opacity $time-sm;
+  }
+
+  &__content {
+    transition: opacity $time-sm;
+  }
+
+  &__success {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity $time-sm;
+  }
+
+  &.success {
+
+    .default-form__content {
+      opacity: 0.1;
+      pointer-events: none;
+    }
+
+    .default-form__success {
+      opacity: 1;
+    }
+  }
+
+  &.error {
+
+    .default-form__error {
+      display: block;
+    }
+  }
+
+  &.processing {
+    pointer-events: none;
+
+    .default-form__button {
+      opacity: 0.3;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.title {
+  font-size: rem-calc(32);
+  font-weight: 500;
+  line-height: 1.2em;
+  margin-bottom: 1.05em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.title--lg {
+  font-size: rem-calc(24);
+  margin-bottom: 1.6em;
+}
+
+.title--md {
+  font-size: rem-calc(20);
+  margin-bottom: 1.6em;
+}
+
+.title--sm {
+  font-size: rem-calc(20);
+  margin-bottom: 1.6em;
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+.title--xsm {
+  font-size: 14px;
+  margin-bottom: 1.2em;
+  letter-spacing: 0;
+  text-transform: none;
+}

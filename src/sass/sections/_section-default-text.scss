@@ -1,0 +1,73 @@
+.default-text-section {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.45em;
+  letter-spacing: 0;
+
+  p, ul, ol {
+    margin: 1em 0;
+    line-height: 1.45em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 1.5em 0;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    line-height: 1.45em;
+  }
+
+  strong {
+    font-weight: 500;
+    letter-spacing: 0.05em;
+  }
+
+  h1 {
+    font-size: rem-calc(38);
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: rem-calc(25);
+  }
+
+  h3 {
+    font-size: rem-calc(20);
+  }
+
+  h4 {
+    font-size: rem-calc(17);
+  }
+
+  h5 {
+    font-size: rem-calc(14);
+  }
+
+  ul, ol {
+    padding-left: rem-calc(30);
+
+    li {
+      margin: 0.5em 0;
+    }
+  }
+
+  ul {
+    list-style: disc;
+
+    ul {
+      list-style: circle;
+    }
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  a {
+    font-weight: 500;
+    transition: opacity $time-sm;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

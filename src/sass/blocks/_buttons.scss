@@ -1,0 +1,48 @@
+.button-now {
+  font-size: rem-calc(20);
+  font-weight: 500;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+
+
+  span {
+    display: inline-block;
+    margin-left: 0.15em;
+    animation-name: flashing;
+    animation-duration: 600ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    opacity: 0.1;
+  }
+
+  @keyframes flashing {
+    0% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0.5
+    }
+  }
+}
+
+.button {
+  font-size: rem-calc(14);
+  font-weight: 500;
+  line-height: 1.29em;
+  width: 100%;
+  padding: rem-calc(10 10);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid $color-1;
+}
+
+a.button {
+  display: flex;
+  justify-content: center;
+}
+
+.button--white {
+  color: $color-2;
+  border: 1px solid $color-2;
+}

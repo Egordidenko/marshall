@@ -1,0 +1,152 @@
+.configurator-preview {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: calc(50% + 15px);
+  height: 100vh;
+  padding: rem-calc(100) 50px;
+  background: $color-2;
+
+  @include target-safary {
+    height: 100%;
+  }
+
+  @media (max-width: $lg) {
+    width: 100%;
+    padding: rem-calc(100) 30px;
+    transition: opacity 500ms;
+    pointer-events: none;
+    opacity: 0;
+
+    &.visible {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: $sm) {
+    padding: rem-calc(100) 25px;
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__images {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 100%;
+    padding-top: 100%;
+    transform: translate(-50%, -50%);
+
+    @media (max-width: $lg) {
+      transform: translate(-50%, calc(-50% - 30px));
+    }
+  }
+
+  &__images-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 75vh;
+    height: 100%;
+    max-height: 75vh;
+    transform: translate(-50%, -50%);
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__side-select {
+    position: absolute;
+    z-index: 2;
+    right: -20px;
+    bottom: rem-calc(-65);
+
+    @media (max-width: $lg) {
+      bottom: rem-calc(-85);
+    }
+
+    button {
+      font-size: 14.14px;
+      font-weight: 500;
+      padding: 15px 20px;
+      transition: opacity $time-sm;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      opacity: 0.3;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__size {
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+    position: absolute;
+    bottom: rem-calc(-50);
+    left: 0;
+    width: 50%;
+    padding-top: rem-calc(33);
+    line-height: 1.45em;
+
+    @media (max-width: $lg) {
+      font-size: 12px;
+      bottom: rem-calc(-70);
+    }
+
+    @media (max-width: $xsm) {
+      bottom: rem-calc(-30);
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+
+  &__preloaded-images {
+    display: none;
+  }
+
+  &__confirm-button {
+    display: none;
+
+    @media (max-width: $lg) {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+
+      .button {
+        max-width: 400px;
+      }
+    }
+
+    @media (max-width: $xsm) {
+      bottom: rem-calc(7);
+    }
+
+  }
+}
+
+.configurator-image-animation-enter-active, .configurator-image-animation-leave-active {
+  transition: opacity 500ms;
+}
+
+.configurator-image-animation-enter, .configurator-image-animation-leave-to {
+  opacity: 0;
+}

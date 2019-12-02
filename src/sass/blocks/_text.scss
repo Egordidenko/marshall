@@ -1,0 +1,27 @@
+.text-container {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.45em;
+  //margin: 1em 0;
+  letter-spacing: 0;
+
+  p {
+    margin-bottom: 0.9em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.text-container--sm {
+  font-size: 12px;
+}
+
+.text-container--lg {
+  font-size: 16px;
+}
+
+.blurable-on-lang-open {
+  will-change: filter;
+}
